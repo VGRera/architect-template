@@ -24,8 +24,8 @@ export default function Home() {
                 Atelier d'Architecture
               </div>
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-black leading-[0.9] mb-8">
-                ESPACES <br />
-                <span className="text-stroke text-background">À VIVRE.</span>
+                ARCHITECTURES <br />
+                <span className="text-stroke text-background">HABITÉES.</span>
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground max-w-lg mb-10 leading-relaxed">
                 RESPIRO accompagne vos projets de construction et de rénovation avec soin et créativité. 
