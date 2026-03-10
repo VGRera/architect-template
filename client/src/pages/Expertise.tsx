@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { PenTool, Key, CheckSquare, ClipboardList, TreePine, PaintBucket } from "lucide-react";
+import { PenTool, Key, SquareCheck as CheckSquare, ClipboardList, TreePine, PaintBucket } from "lucide-react";
 
 export default function Expertise() {
   const expertise = [
