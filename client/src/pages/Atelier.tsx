@@ -24,15 +24,15 @@ export default function Atelier() {
             viewport={{ once: true }}
             className="prose prose-lg text-muted-foreground"
           >
-            <h2 className="text-3xl font-display font-bold text-foreground mb-6">Notre Philosophie</h2>
+            <h2 className="text-3xl font-display font-bold text-foreground mb-6">Notre Approche</h2>
             <p>
-              RESPIRO est né de la volonté de créer des espaces qui respirent, des lieux où l'architecture se met au service de l'humain et de son environnement. Nous concevons chaque projet comme une histoire unique, tissée avec soin et créativité.
+              Nous créons des architectures sincères, contextuelles et philosophiques. Chaque projet est une occasion de démontrer que la rigueur économique et l'excellence architecturale ne sont pas incompatibles.
             </p>
             <p>
-              Notre atelier d'architecture croit profondément que la fonctionnalité ne doit jamais sacrifier l'esthétique, et inversement. Nous recherchons un équilibre parfait, des lignes épurées et des volumes justes.
+              Nos projets ne partent jamais d'une page blanche. Nous partons du site, du programme client et de la réglementation — ces données deviennent nos outils créatifs pour concevoir une réponse unique et adaptée.
             </p>
             <p>
-              L'accompagnement humain est au cœur de notre démarche. Nous écoutons, nous analysons et nous traduisons vos besoins en solutions spatiales concrètes, durables et inspirantes.
+              Du laboratoire d'idées à la réalisation finale, nous accompagnons nos clients avec rigueur et vision. Nous veillons à créer des patrimoines pérennes, des espaces qui respirent et s'adaptent aux évolutions futures.
             </p>
           </motion.div>
 
@@ -58,22 +58,22 @@ export default function Atelier() {
         </div>
       </section>
 
-      {/* Philosophie detail (New Section) */}
+      {/* Core Principles */}
       <section className="py-24 max-w-7xl mx-auto px-6 lg:px-12 border-t architect-line-bottom">
-        <h2 className="text-4xl font-display font-bold mb-16 text-center">Nos Convictions</h2>
+        <h2 className="text-4xl font-display font-bold mb-16 text-center">Nos Principes</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {[
             {
-              title: "L'Analyse du Lieu",
-              desc: "Chaque projet commence par une observation minutieuse du site : son orientation, son histoire, ses contraintes. L'architecture doit s'insérer naturellement dans son environnement."
+              title: "L'Interprétation Contextuelle",
+              desc: "Nous lisons le site comme un texte riche d'informations. Topographie, histoire, réglementation — tout devient matière créative pour concevoir une architecture ancrée dans son lieu."
             },
             {
-              title: "La Matière",
-              desc: "Nous accordons une grande importance au choix des matériaux. Leurs textures, leurs couleurs et la façon dont ils vieillissent déterminent l'âme du projet."
+              title: "La Sincérité Matérielle",
+              desc: "Chaque matériau pour ses véritables qualités. Une pierre doit être pierre, un bois doit être bois. Cette sincérité garantit une architecture honnête qui vieillit avec grâce."
             },
             {
-              title: "La Lumière",
-              desc: "Élément central de notre conception, la lumière sculpte l'espace. Nous travaillons les ouvertures pour créer des jeux d'ombres et valoriser les volumes tout au long de la journée."
+              title: "La Rigueur du Détail",
+              desc: "C'est dans les détails que réside la qualité. Du développement des plans à la réalisation, nous soignons chaque intersection, chaque jonction, chaque surface."
             }
           ].map((item, i) => (
             <motion.div
@@ -103,19 +103,19 @@ export default function Atelier() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {[
             {
-              name: "Julien Moreau",
-              role: "Architecte DPLG - Fondateur",
-              desc: "Spécialiste de l'intégration paysagère et de la construction durable. Julien a fondé RESPIRO avec la volonté de remettre le bon sens au cœur de la conception."
+              name: "Sophie Levasseur",
+              role: "Architecte DPLG",
+              desc: "Co-fondatrice de RESPIRO. Spécialiste de l'analyse contextuelle et de la conception urbaine. Chaque projet est pour elle l'occasion de dialoguer avec le territoire et de créer une architecture qui le révèle."
             },
             {
-              name: "Claire Dubois",
-              role: "Architecte d'Intérieur",
-              desc: "Experte en optimisation d'espaces et en design mobilier. Claire apporte une attention particulière aux détails, aux textures et à la lumière."
+              name: "Pierre Durand",
+              role: "Architecte DPLG",
+              desc: "Co-fondateur. Expert en matérialité et détail constructif. Pierre veille à ce que chaque élément soit sincère et que la construction révèle l'intention architecturale."
             },
             {
-              name: "Thomas Leblanc",
-              role: "Conducteur de Travaux",
-              desc: "Le garant de la réalisation de vos projets. Thomas assure la coordination des entreprises et veille au respect strict des plannings et des budgets."
+              name: "Marie Arnould",
+              role: "Conductrice de Projets",
+              desc: "Cheffe d'orchestre de la réalisation. Marie assure la cohésion entre les phases de conception et de chantier, veillant au respect des visions initiales et de la qualité finale."
             }
           ].map((member, i) => (
             <motion.div
@@ -142,12 +142,12 @@ export default function Atelier() {
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
             {[
-              { num: "15+", label: "Années d'expérience" },
-              { num: "120", label: "Projets réalisés" },
-              { num: "3", label: "Architectes associés" },
-              { num: "100%", label: "Sur mesure" },
+              { num: "20+", label: "Années d'expérience" },
+              { num: "85", label: "Projets réalisés" },
+              { num: "2", label: "Fondateurs" },
+              { num: "100%", label: "Contextuel" },
             ].map((stat, i) => (
-              <motion.div 
+              <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}

@@ -5,49 +5,48 @@ export default function Expertise() {
   const expertise = [
     {
       icon: PenTool,
-      title: "Conception Architecturale",
-      desc: "Étude du site, analyse de vos besoins, esquisses, modélisation 3D et définition des espaces. Nous donnons forme à vos idées en concevant des plans détaillés."
+      title: "Conception Contextuelle",
+      desc: "Au-delà de la page blanche. Nous interprétons les données du site, du programme et de la réglementation pour concevoir une réponse architecturale unique et poétique."
     },
     {
       icon: ClipboardList,
-      title: "Démarches Administratives",
-      desc: "Constitution et dépôt des dossiers de Permis de Construire (PC) ou Déclaration Préalable (DP). Nous gérons les échanges avec les mairies et l'urbanisme."
+      title: "Faisabilité & Accompagnement",
+      desc: "Analyse approfondie de l'enveloppe budgétaire, du patrimoine existant et de la réglementation locale. Nous questionnons les besoins et ouvrons des perspectives nouvelles."
     },
     {
       icon: CheckSquare,
-      title: "Appels d'Offres",
-      desc: "Rédaction des cahiers des charges (CCTP), consultation des entreprises partenaires et analyse des devis pour garantir le juste prix."
+      title: "Démarches Administratives",
+      desc: "Constitution intégrale des dossiers de Permis de Construire et Déclarations Préalables. Gestion des échanges avec les autorités et suivi du dossier administratif."
     },
     {
       icon: Key,
-      title: "Suivi & Réalisation",
-      desc: "Direction de l'exécution des travaux (DET), réunions de chantier régulières et assistance lors de la réception de l'ouvrage jusqu'à la remise des clés."
+      title: "Direction de Projet",
+      desc: "Chef d'orchestre du chantier, nous coordonnons tous les intervenants et veillons au respect de la vision architecturale. Suivi rigoureux jusqu'à la livraison."
     },
     {
       icon: PaintBucket,
-      title: "Architecture d'Intérieur",
-      desc: "Conception de mobilier sur mesure, choix des matériaux, des couleurs et des éclairages pour un intérieur cohérent jusqu'au moindre détail."
+      title: "Détail & Matérialité",
+      desc: "Développement des détails constructifs qui révèlent les qualités du projet. Sélection des matériaux pérennes et sincères pour une réalisation durable."
     },
     {
       icon: TreePine,
-      title: "Rénovation Énergétique",
-      desc: "Audit de l'existant et propositions d'améliorations thermiques. Intégration de matériaux biosourcés et de solutions éco-responsables."
+      title: "Patrimoine & Pérennité",
+      desc: "Réflexion sur l'évolutivité des espaces et leur intégration urbaine. Nous créons des patrimoines architecturaux qui traversent le temps avec élégance."
     }
   ];
 
   return (
     <div className="w-full pt-12 pb-24">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="mb-16"
         >
-          <h1 className="text-5xl md:text-6xl font-display font-black mb-6">NOTRE EXPERTISE</h1>
+          <h1 className="text-5xl md:text-6xl font-display font-black mb-6">DOMAINES DE COMPÉTENCE</h1>
           <div className="w-24 h-1 bg-primary mb-6"></div>
           <p className="text-xl text-muted-foreground max-w-3xl">
-            Un accompagnement global, de la première esquisse jusqu'à la livraison.
-            Nous structurons notre mission en phases claires pour sécuriser votre projet techniquement, financièrement et esthétiquement.
+            Une approche pluridisciplinaire guidée par l'interprétation contextuelle, la sincérité matérielle et la création d'un patrimoine pérenne. De l'analyse initiale à la réalisation, chaque phase construit la qualité du projet.
           </p>
         </motion.div>
 
@@ -75,38 +74,47 @@ export default function Expertise() {
         {/* Detailed Process (New Section) */}
         <section className="py-24 border-t architect-line-bottom">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-display font-bold mb-4">Notre Méthodologie</h2>
-            <p className="text-muted-foreground">Un processus rigoureux pour garantir le succès de votre projet.</p>
+            <h2 className="text-4xl font-display font-bold mb-4">Le Processus de Création</h2>
+            <p className="text-muted-foreground">Quatre phases pour transformer une intention en réalité architecturale.</p>
           </div>
 
-          <div className="relative">
-            {/* Connecting Line */}
-            <div className="absolute top-1/2 left-0 w-full h-[1px] bg-border hidden md:block -translate-y-1/2 z-0"></div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10">
-              {[
-                { phase: "Phase 1", title: "Rencontre & Faisabilité", detail: "Visite du site, écoute de vos attentes, définition de l'enveloppe budgétaire." },
-                { phase: "Phase 2", title: "Conception", detail: "Esquisses, plans détaillés, permis de construire, choix architecturaux." },
-                { phase: "Phase 3", title: "Préparation chantier", detail: "Consultation des entreprises, analyse des devis, planning d'intervention." },
-                { phase: "Phase 4", title: "Réalisation", detail: "Suivi des travaux, coordination des artisans, réception de l'ouvrage." },
-              ].map((step, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.15 }}
-                  className="bg-background border border-border p-6 text-center"
-                >
-                  <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-6 font-bold font-display">
-                    {i + 1}
-                  </div>
-                  <div className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-2">{step.phase}</div>
-                  <h3 className="font-bold text-lg mb-4">{step.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{step.detail}</p>
-                </motion.div>
-              ))}
-            </div>
+          <div className="space-y-8">
+            {[
+              {
+                phase: "01",
+                title: "Le Laboratoire d'Idées",
+                detail: "Nous commençons par questionner l'ensemble des paramètres : budget, contexte urbain, réglementation. Cette phase est cruciale pour déterminer la crédibilité du projet et ouvrir des perspectives nouvelles sur l'usage et l'évolution de l'espace."
+              },
+              {
+                phase: "02",
+                title: "Créer l'Identité du Projet",
+                detail: "Sur la base de ces données, nous concevons une réponse architecturale unique. Ce n'est pas un geste gratuit, mais une œuvre sincère, contextuelle et philosophique, révélant les qualités du site et répondant aux besoins spécifiques."
+              },
+              {
+                phase: "03",
+                title: "Développer & Détailler",
+                detail: "Cette phase établit les fondations de la construction. Nous développons les règles qui régiront toute la période d'exécution, précisons les matériaux et créons les détails qui révèleront les qualités architecturales du projet."
+              },
+              {
+                phase: "04",
+                title: "Réaliser & Concrétiser",
+                detail: "En tant que chef d'orchestre du chantier, nous coordonnons tous les intervenants et veillons au respect de la vision initiale. C'est au travers d'un dialogue constructif que nous maîtrisons les adaptations et la qualité finale du projet."
+              }
+            ].map((step, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.15 }}
+                className="border-l-4 border-primary pl-8 py-4 relative"
+              >
+                <div className="absolute -left-[14px] top-8 w-6 h-6 bg-primary rounded-full" />
+                <div className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-2">{step.phase}</div>
+                <h3 className="text-2xl font-display font-bold mb-3">{step.title}</h3>
+                <p className="text-muted-foreground leading-relaxed max-w-3xl">{step.detail}</p>
+              </motion.div>
+            ))}
           </div>
         </section>
 
@@ -114,26 +122,26 @@ export default function Expertise() {
         <section className="py-24">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-display font-bold mb-4">Questions Fréquentes</h2>
-            <p className="text-muted-foreground">Tout ce que vous devez savoir avant de vous lancer.</p>
+            <p className="text-muted-foreground">Tout ce que vous devez savoir avant de démarrer votre projet.</p>
           </div>
 
           <div className="max-w-3xl mx-auto flex flex-col gap-6">
             {[
               {
-                q: "Combien coûte une mission d'architecte ?",
-                a: "Nos honoraires sont généralement calculés en pourcentage du montant total des travaux (entre 10% et 14% selon la complexité du projet et l'étendue de la mission). Une estimation précise vous est fournie dès l'étude de faisabilité."
+                q: "Comment débute une collaboration ?",
+                a: "Nous commençons par une rencontre approfondie au cours de laquelle nous écoutons vos envies, visitons le site et discutons de votre enveloppe budgétaire. Cette phase de dialogue nous permet de comprendre vos besoins avant de proposer une approche adaptée."
               },
               {
-                q: "Quelle est la durée moyenne d'un projet ?",
-                a: "Pour une rénovation complète ou une construction, comptez généralement entre 8 et 14 mois. Cela inclut les phases de conception (2-3 mois), les démarches administratives (2-4 mois) et la réalisation des travaux (4-8 mois)."
+                q: "Quel est le rôle exact de l'architecte ?",
+                a: "L'architecte est un interprète du contexte et un créateur de qualité. Notre rôle est de transformer les contraintes (site, budget, réglementation) en une opportunité créative, en concevant des espaces qui allient fonction, beauté et durabilité."
               },
               {
-                q: "Dois-je m'occuper des démarches administratives ?",
-                a: "Non, notre équipe prend en charge l'intégralité des démarches, de la constitution du dossier jusqu'à l'obtention de votre permis de construire ou déclaration préalable."
+                q: "Comment garantissez-vous la qualité finale ?",
+                a: "Par une rigueur de détail à chaque étape. Nous développons les règles qui régiront la construction, précisons les matériaux et créons les détails constructifs. Sur le chantier, notre présence assure le respect de la vision initiale et de la qualité prévue."
               },
               {
-                q: "Travaillez-vous avec vos propres artisans ?",
-                a: "Nous sommes indépendants mais disposons d'un réseau d'artisans de confiance (maçons, menuisiers, plombiers...) avec qui nous avons l'habitude de travailler. Cependant, vous restez libre de choisir vos propres entreprises si vous le souhaitez."
+                q: "Que signifie 'sincérité matérielle' ?",
+                a: "C'est notre conviction que chaque matériau doit être utilisé pour ses véritables qualités, sans déguisement. Une pierre doit être pierre, un bois doit être bois. Cette sincérité garantit une architecture pérenne, honnête et intemporelle."
               }
             ].map((faq, i) => (
               <motion.div
@@ -156,18 +164,18 @@ export default function Expertise() {
           </div>
         </section>
 
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           className="mt-24 p-12 bg-muted/30 border border-border text-center blueprint-grid"
         >
-          <h2 className="text-3xl font-display font-bold mb-6">Prêt à démarrer votre projet ?</h2>
+          <h2 className="text-3xl font-display font-bold mb-6">Parlons de votre projet</h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Discutons ensemble de vos envies. Le premier rendez-vous est l'occasion de découvrir notre méthodologie et d'évaluer la faisabilité de votre projet.
+            Une première rencontre pour explorer vos intentions, visiter le site et déterminer ensemble la meilleure approche pour concrétiser votre vision.
           </p>
           <a href="mailto:contact@respiro-architecture.fr" className="inline-block bg-primary text-primary-foreground px-8 py-4 text-sm font-bold uppercase tracking-wider hover:bg-primary/90 transition-colors">
-            Contactez-nous
+            Prendre rendez-vous
           </a>
         </motion.div>
       </div>
